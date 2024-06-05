@@ -1,0 +1,784 @@
+
+
+.nav-actions button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #ff5733;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-actions button:hover {
+    background-color: #ff2e00;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #333;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: white;
+        border-top: 1px solid #eaeaea;
+        display: none;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content label {
+    font-weight: bold;
+}
+
+.modal-content input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    padding: 10px;
+    border: none;
+    background-color: #ff5733;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #ff2e00;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: white;
+        border-top: 1px solid #eaeaea;
+        display: none;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('https://images.pexels.com/photos/5410070/pexels-photo-5410070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content button {
+    background: #ff5733;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Key Problems Solved Section */
+.problems-section {
+    background: #f4f4f4;
+    padding: 50px 20px;
+}
+
+.problems-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.problems-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.problem {
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.problem img {
+    width: 100px;
+    height: 100px;
+}
+
+.problem h3 {
+    margin: 20px 0 10px;
+    font-size: 1.2rem;
+}
+
+.problem p {
+    font-size: 1rem;
+}
+
+
+/* Key Metrics Section */
+.metrics-section {
+    padding: 50px 20px;
+}
+
+.metrics-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.metrics-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.metric {
+    max-width: 250px;
+    margin: 20px;
+    text-align: center;
+}
+
+.metric img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.metric p {
+    font-size: 1.1rem;
+}
+
+/* Reviews Section */
+.reviews-section {
+    background: #f4f4f4;
+    padding: 50px 20px;
+}
+
+.reviews-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.reviews-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.review {
+    max-width: 300px;
+    margin: 20px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.review p {
+    margin-bottom: 10px;
+}
+/* Features Section */
+.features-section {
+    padding: 50px 20px;
+}
+
+.features-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.features-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.feature h3 {
+    margin: 20px 0 10px;
+    font-size: 1.2rem;
+}
+
+.feature p {
+    font-size: 1rem;
+}
+/* CTA Section */
+.cta-section {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cta-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.cta-section p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.cta-section button {
+    background: #ff5733;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* Footer Section */
+.footer-section {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p, .cta-section p {
+        font-size: 1.2rem;
+    }
+
+    .problems-content, .metrics-content, .reviews-content, .features-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .problem, .metric, .review, .feature {
+        max-width: 90%;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p, .cta-section p {
+        font-size: 1rem;
+    }
+
+    .hero-content button, .cta-section button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+.pricing-card {
+    padding: 2em;
+}
+
+.pricing-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+
+.pricing-card p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+.pricing-card ul li {
+    margin-bottom: 0.5em;
+}
+
+.pricing-card button {
+    background-color: #ff7f50;
+    color: #fff;
+    border: none;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+}
+
+.pricing-card button:hover {
+    background-color: #ff6347;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+}
+
+.contact-form, .contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact-form form label {
+    text-align: left;
+}
+
+.contact-form form input, .contact-form form textarea, .contact-form form button {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form form button {
+    background-color: #ff7f50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form form button:hover {
+    background-color: #ff6347;
+}
+
+.contact-info p {
+    margin-bottom: 0.5em;
+} */
+
+
+
+
+
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 0.5em;
+}
+
+.nav-actions button {
+    background-color: #ff7f50;
+    border: none;
+    color: #fff;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+.nav-actions button:hover {
+    background-color: #ff6347;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    width: 25px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #ff7f50;
+    color: #fff;
+    text-align: center;
+    padding: 2em 1em;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.hero-content button {
+    background-color: #fff;
+    color: #ff7f50;
+    border: none;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+}
+
+.hero-content button:hover {
+    background-color: #f5f5f5;
+}
+
+/* Section Styles */
+section {
+    padding: 2em 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.problems-section, .features-section, .solutions-section, .contact-section, .pricing-section {
+    background-color: #fff;
+    margin-bottom: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.problems-content, .features-content, .solutions-content, .pricing-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.problem, .feature, .solution, .pricing-card {
+    flex: 1;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px; /* Adjust as necessary */
+}
+
+.problem img, .feature img, .solution img {
+    max-width: 100px;
+    margin-bottom: 1em;
+}
+
+.problem h3, .feature h3, .solution h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.problem p, .feature p, .solution p {
+    font-size: 1em;
+}
+
+.pricing-card {
+    padding: 2em;
+}
+
+.pricing-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+
+.pricing-card p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+.pricing-card ul li {
+    margin-bottom: 0.5em;
+}
+
+.pricing-card button {
+    background-color: #ff7f50;
+    color: #fff;
+    border: none;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+}
+
+.pricing-card button:hover {
+    background-color: #ff6347;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+}
+
+.contact-form, .contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact-form form label {
+    text-align: left;
+}
+
+.contact-form form input, .contact-form form textarea, .contact-form form button {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form form button {
+    background-color: #ff7f50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form form button:hover {
+    background-color: #ff6347;
+}
+
+.contact-info p {
+    margin-bottom: 0.5em;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: #ff7f50;
+    color: #fff;
+    text-align: center;
+    padding: 2em 1em;
+}
+
+.cta-section h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.cta-section p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.cta-section button {
+    background-color: #fff;
+    color: #ff7f50;
+    border: none;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+}
+
+.cta-section button:hover {
+    background-color: #f5f5f5;
+}
+
+/* Footer Styles */
+.footer-section {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}

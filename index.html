@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleverBooks</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">CleverBooks</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button id="login-btn">Log In</button>
+                <button id="signup-btn">Sign Up</button>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Every Order Fulfill On Time</h1>
+            <p>Revolutionize the way you manage your inventory with CleverBooks.</p>
+            <button>Get Started</button>
+        </div>
+    </header>
+
+    <section class="problems-section">
+        <h2>Key Problems Solved</h2>
+        <div class="problems-content">
+            <div class="problem">
+                <img src="problem-1.jpeg" alt="Problem 1 Icon">
+                <h3>Overstocking & Understocking</h3>
+                <p>Prevent inventory issues with real-time monitoring and forecasting.</p>
+            </div>
+            <div class="problem">
+                <img src="problem-2.jpeg" alt="Problem 2 Icon">
+                <h3>Manual Errors</h3>
+                <p>Reduce errors with automated processes and accurate data management.</p>
+            </div>
+            <div class="problem">
+                <img src="problem-3.jpeg" alt="Problem 3 Icon">
+                <h3>Supply Chain Inefficiencies</h3>
+                <p>Optimize your supply chain with seamless integration and analytics.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="metrics-section">
+        <h2>Why Choose CleverBooks?</h2>
+        <div class="metrics-content">
+            <div class="metric">
+                <img src="metric-1.png" alt="Metric 1 Icon">
+                <p>99.9% Uptime</p>
+            </div>
+            <div class="metric">
+                <img src="metric-2.jpeg" alt="Metric 2 Icon">
+                <p>24/7 Support</p>
+            </div>
+            <div class="metric">
+                <img src="metric-3.jpeg" alt="Metric 3 Icon">
+                <p>Trusted by 10,000+ Companies</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-section">
+        <h2>What Our Clients Say</h2>
+        <div class="reviews-content">
+            <div class="review">
+                <p>"CleverBooks has transformed our inventory management!"</p>
+                <p>- John Doe, CEO of ExampleCorp</p>
+            </div>
+            <div class="review">
+                <p>"Highly recommend CleverBooks for any business."</p>
+                <p>- Jane Smith, Operations Manager at ExampleCorp</p>
+            </div>
+            <div class="review">
+                <p>"Excellent tool for managing inventory effectively."</p>
+                <p>- Jim Brown, CFO of ExampleCorp</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <h2>Our Features</h2>
+        <div class="features-content">
+            <div class="feature">
+                <h3>Real-Time Inventory Tracking</h3>
+                <p>Get up-to-date information on your inventory status with real-time tracking.</p>
+            </div>
+            <div class="feature">
+                <h3>Automated Reordering</h3>
+                <p>Automatically reorder stock to prevent shortages and overstocking.</p>
+            </div>
+            <div class="feature">
+                <h3>Comprehensive Reports</h3>
+                <p>Generate detailed reports to analyze and optimize your inventory management.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Grow Faster Than You Think</h2>
+        <p>Join thousands of businesses using CleverBooks to manage their inventory efficiently.</p>
+        <button>Get Started Now</button>
+    </section>
+
+    <footer class="footer-section">
+        <div class="footer-content">
+            <p>About CleverBooks</p>
+            <p>123 CleverBooks Lane, Booktown, BK 12345</p>
+        </div>
+    </footer>
+        <!-- Log In Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-login-modal">&times;</span>
+            <h2>Log In</h2>
+            <form>
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required>
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-signup-modal">&times;</span>
+            <h2>Sign Up</h2>
+            <form>
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" required>
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const loginBtn = document.getElementById('login-btn');
+            const signupBtn = document.getElementById('signup-btn');
+            const signupHeroBtn = document.getElementById('signup-hero-btn');
+            const signupCtaBtn = document.getElementById('signup-cta-btn');
+            const loginModal = document.getElementById('login-modal');
+            const signupModal = document.getElementById('signup-modal');
+            const closeLoginModal = document.getElementById('close-login-modal');
+            const closeSignupModal = document.getElementById('close-signup-modal');
+
+            navToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+
+            loginBtn.addEventListener('click', function() {
+                loginModal.style.display = 'block';
+            });
+
+            signupBtn.addEventListener('click', function() {
+                signupModal.style.display = 'block';
+            });
+
+            signupHeroBtn.addEventListener('click', function() {
+                signupModal.style.display = 'block';
+            });
+
+            signupCtaBtn.addEventListener('click', function() {
+                signupModal.style.display = 'block';
+            });
+
+            closeLoginModal.addEventListener('click', function() {
+                loginModal.style.display = 'none';
+            });
+
+            closeSignupModal.addEventListener('click', function() {
+                signupModal.style.display = 'none';
+            });
+
+            window.addEventListener('click', function(event) {
+                if (event.target == loginModal) {
+                    loginModal.style.display = 'none';
+                }
+                if (event.target == signupModal) {
+                    signupModal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
